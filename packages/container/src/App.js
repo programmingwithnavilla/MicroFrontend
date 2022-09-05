@@ -1,8 +1,9 @@
 import React from "react";
-import HelloReactApp from "./components/HelloReactApp";
 import { Route, Switch, Router, Link } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import HelloReactApp from "./components/HelloReactApp";
 import HelloVueApp from "./components/HelloVueApp";
+import ProfileApp from "./components/ProfileApp";
 
 const history = createBrowserHistory();
 
@@ -13,6 +14,8 @@ const Header = () => (
     <Link to="/react">Micro1: use react</Link>
     <br />
     <Link to="/vue">Micro2: use vue</Link>
+    <br />
+    <Link to="/profile">Micro3: use React Profile</Link>
   </div>
 );
 
@@ -23,6 +26,7 @@ export default () => {
       <hr />
       <Switch>
         <Route path="/vue" component={HelloVueApp} />
+        <Route path="/profile" component={ProfileApp} />
         <Route path="/" component={HelloReactApp} />
       </Switch>
     </Router>
