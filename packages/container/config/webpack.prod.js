@@ -15,7 +15,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        helloReact: `helloReact@${domain}/helloReact/latest/remoteEntry.js`,
+        helloReact: `booking@${domain}/booking/latest/remoteEntry.js`,
         helloVue: `helloVue@${domain}/helloVue/latest/remoteEntry.js`,
         profile: `profile@${domain}/profile/latest/remoteEntry.js`,
       },

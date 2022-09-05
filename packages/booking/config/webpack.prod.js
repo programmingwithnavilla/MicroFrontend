@@ -9,14 +9,14 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/helloReact/latest/",
+    publicPath: "/booking/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "helloReact",
+      name: "booking",
       filename: "remoteEntry.js",
       exposes: {
-        "./HelloReactApp": "./src/bootstrap",
+        "./BookingApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch, Router, Link } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import HelloReactApp from "./components/HelloReactApp";
+import BookingApp from "./components/BookingApp";
 import HelloVueApp from "./components/HelloVueApp";
 import ProfileApp from "./components/ProfileApp";
 
@@ -27,7 +27,7 @@ export default () => {
       <Switch>
         <Route path="/vue" component={HelloVueApp} />
         <Route path="/profile" component={ProfileApp} />
-        <Route path="/" component={HelloReactApp} />
+        <Route path="/" component={BookingApp} />
       </Switch>
     </Router>
   );
