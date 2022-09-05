@@ -9,15 +9,14 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/container/latest/",
+    publicPath: "/automation/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "container",
-      remotes: {
-        helloReact: `booking@${domain}/booking/latest/remoteEntry.js`,
-        automation: `automation@${domain}/automation/latest/remoteEntry.js`,
-        profile: `profile@${domain}/profile/latest/remoteEntry.js`,
+      name: "automation",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./AutomationApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),
