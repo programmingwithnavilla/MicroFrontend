@@ -1,21 +1,22 @@
 import React from "react";
 import { Switch, Route, Router, Link } from "react-router-dom";
 
-const helloWorld = () => <div>Hello World!</div>;
-const helloReact = () => <div>Hello React!sss</div>;
+const loginForm = () => <div>Login Form</div>;
+const signupForm = () => <div>Hello React!sss</div>;
 
 export default ({ history }) => {
   return (
     <div>
+      <h1>This is a profile Project</h1>
       <Router history={history}>
         <Switch>
-          <Route path="/react" component={helloReact} />
-          <Route path="/" component={helloWorld} />
+          <Route path="/login" component={loginForm} />
+          <Route path="/signup" component={signupForm} />
         </Switch>
         <br />
-        <Link to="/react">Say hello to React!</Link>
+        <Link to="/login">login</Link>
         <br />
-        <Link to="/">Say hello to the World!</Link>
+        <Link to="/signup">profile</Link>
       </Router>
     </div>
   );
